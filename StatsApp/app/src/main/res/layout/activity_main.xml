@@ -11,53 +11,79 @@
         android:id="@+id/btnStdDev"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="310dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="232dp"
+        android:onClick="doStdDev"
         android:text="Std Dev"
-        tools:layout_editor_absoluteX="310dp"
-        tools:layout_editor_absoluteY="451dp"
-        android:onClick="doStdDev"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnVarience"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="153dp"
+        android:layout_marginBottom="232dp"
+        android:onClick="doVariance"
         android:text="Variance"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="451dp"
-        android:onClick="doVariance"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/editText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="266dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="420dp"
         android:ems="10"
         android:inputType="numberDecimal"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="266dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="341dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="342dp"
+        android:onClick="doAdd"
         android:text="Add"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="341dp"
-        android:onClick="doAdd"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnMean"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="232dp"
+        android:onClick="doMean"
         android:text="Mean"
-        tools:layout_editor_absoluteX="12dp"
-        tools:layout_editor_absoluteY="451dp"
-        android:onClick="doMean"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="184dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="185dp"
+        android:layout_marginBottom="532dp"
         android:text="Output"
-        tools:layout_editor_absoluteX="184dp"
-        tools:layout_editor_absoluteY="180dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
