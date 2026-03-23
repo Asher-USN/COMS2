@@ -1,5 +1,7 @@
 package com.example.statsapp;
 import static com.example.statsapp.Calculator.getMean;
+import static com.example.statsapp.Calculator.getStdDev;
+import static com.example.statsapp.Calculator.getVariance;
 
 import android.os.Bundle;
 import android.view.View;
@@ -32,5 +34,18 @@ import java.util.ArrayList;
             String mean = getMean(numbers).toString();
             TextView t = (TextView)findViewById(R.id.textView);
             t.setText(mean);
+        }
+
+        public void doVariance(View v){
+            String var = getVariance(numbers).toString();
+            TextView t = (TextView)findViewById(R.id.textView);
+            t.setText(var);
+
+        }
+
+        public void doStdDev(View v){
+            String stdDev = getStdDev(numbers).toString();
+            TextView t = (TextView)findViewById(R.id.textView);
+            t.setText(stdDev);
         }
 }
