@@ -13,7 +13,8 @@
         android:layout_height="wrap_content"
         android:text="Std Dev"
         tools:layout_editor_absoluteX="310dp"
-        tools:layout_editor_absoluteY="451dp" />
+        tools:layout_editor_absoluteY="451dp"
+        android:onClick="doStdDev"/>
 
     <Button
         android:id="@+id/btnVarience"
@@ -21,7 +22,8 @@
         android:layout_height="wrap_content"
         android:text="Variance"
         tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="451dp" />
+        tools:layout_editor_absoluteY="451dp"
+        android:onClick="doVariance"/>
 
     <EditText
         android:id="@+id/editText1"
@@ -38,7 +40,8 @@
         android:layout_height="wrap_content"
         android:text="Add"
         tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="341dp" />
+        tools:layout_editor_absoluteY="341dp"
+        android:onClick="doAdd"/>
 
     <Button
         android:id="@+id/btnMean"
@@ -46,7 +49,8 @@
         android:layout_height="wrap_content"
         android:text="Mean"
         tools:layout_editor_absoluteX="12dp"
-        tools:layout_editor_absoluteY="451dp" />
+        tools:layout_editor_absoluteY="451dp"
+        android:onClick="doMean"/>
 
     <TextView
         android:id="@+id/textView"
