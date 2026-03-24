@@ -1,0 +1,8 @@
+/MC/Lab3/StatsApp/.idea
+build/
+.gradle/
+*.class
+bin/
+*.iml
+local.properties
+.DS_Store
