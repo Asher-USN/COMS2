@@ -5,16 +5,13 @@ import android.app.Activity;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.os.Build;
+
 import android.os.Bundle;
-import android.util.DisplayMetrics;
-import android.view.Display;
-import android.view.Menu;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.WindowMetrics;
 
-import androidx.annotation.RequiresApi;
+
 
 public class MainActivity extends Activity {
 	int x=500,y=20;
