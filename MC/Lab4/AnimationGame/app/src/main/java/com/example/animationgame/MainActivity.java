@@ -2,6 +2,8 @@ package com.example.animationgame;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -18,8 +20,10 @@ public class MainActivity extends Activity {
 	int gx=100,gy=100;
 	int yx=300,yy=50;
 	private int height =0;
+	Bitmap myImage,myImage2,myImage3;
 
 	DrawView drawView;
+
 
 	@SuppressLint("NewApi")
     @Override
@@ -33,7 +37,13 @@ public class MainActivity extends Activity {
 		@SuppressLint({"NewApi", "LocalSuppress"}) WindowMetrics windowMetrics = getWindowManager().getCurrentWindowMetrics();
 
 		height = windowMetrics.getBounds().height();
+		myImage= BitmapFactory.decodeResource(getResources(), R.drawable.ball);
+		Bitmap b1 = BitmapFactory.decodeResource(getResources(), R.drawable.ball1);
+		Bitmap b2= BitmapFactory.decodeResource(getResources(), R.drawable.ball2);
+		int size = 1500;
 
+		myImage2 = Bitmap.createScaledBitmap(b1, size, size, true);
+		myImage3 = Bitmap.createScaledBitmap(b2, size, size, true);
 		drawView = new DrawView(this);
 		setContentView(drawView);
 		drawView.requestFocus();
@@ -42,11 +52,11 @@ public class MainActivity extends Activity {
 
 	public void doDraw(Canvas canvas, Paint paint) {
 		paint.setColor(Color.RED);
-		canvas.drawCircle(x, y, 70, paint);
+		canvas.drawBitmap(myImage, x, y, paint);
 		paint.setColor(Color.GREEN);
-		canvas.drawCircle(gx, gy, 30, paint);
+		canvas.drawBitmap(myImage2, gx, gy, paint);
 		paint.setColor(Color.YELLOW);
-		canvas.drawCircle(yx, yy, 10, paint);
+		canvas.drawBitmap(myImage3, yx, yy, paint);
 		if(y>height){
 			y=0;
 		}else {
