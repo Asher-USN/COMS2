@@ -18,13 +18,31 @@ public class Ball {
         y += yspeed;
         x += xspeed;
 
-        if(y>= max_y || y<=0){
-            y*=-0.8;
+       // if(y>= max_y || y<=0){
+        //    yspeed*=-0.8;
+       // }
+
+      //  if(x>= max_x || x<=0){
+       //     xspeed*=-0.8;
+      //  }
+        // Vertical Bounce
+        if (y >= max_y) {
+            y = max_y;        // Snap back to the bottom edge
+            yspeed *= -0.8;
+        } else if (y <= 0) {
+            y = 0;            // Snap back to the top edge
+            yspeed *= -0.8;
         }
 
-        if(x>= max_x || x<=0){
-            x*=-0.8;
+        // Horizontal Bounce
+        if (x >= max_x) {
+            x = max_x;        // Snap back to the right edge
+            xspeed *= -0.8;
+        } else if (x <= 0) {
+            x = 0;            // Snap back to the left edge
+            xspeed *= -0.8;
         }
+
 
 
 
