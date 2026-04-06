@@ -24,7 +24,7 @@ public class MainActivity extends Activity {
 	private boolean up2;
 	private boolean up3;
 
-	Bitmap myImage,myImage2,myImage3;
+	Bitmap myImage,myImage1,myImage2;
 
 	DrawView drawView;
 
@@ -42,12 +42,9 @@ public class MainActivity extends Activity {
 
 		height = windowMetrics.getBounds().height();
 		myImage= BitmapFactory.decodeResource(getResources(), R.drawable.ball);
-		Bitmap b1 = BitmapFactory.decodeResource(getResources(), R.drawable.ball1);
-		Bitmap b2 = BitmapFactory.decodeResource(getResources(), R.drawable.ball2);
-		int size = 200;
+		myImage1 = BitmapFactory.decodeResource(getResources(), R.drawable.ball1);
+		myImage2 = BitmapFactory.decodeResource(getResources(), R.drawable.ball2);
 
-		myImage2 = Bitmap.createScaledBitmap(b1, size, size, true);
-		myImage3 = Bitmap.createScaledBitmap(b2, size, size, true);
 		drawView = new DrawView(this);
 		setContentView(drawView);
 		drawView.requestFocus();
@@ -58,41 +55,41 @@ public class MainActivity extends Activity {
 		paint.setColor(Color.RED);
 		canvas.drawBitmap(myImage, x, y, paint);
 		paint.setColor(Color.GREEN);
-		canvas.drawBitmap(myImage2, gx, gy, paint);
+		canvas.drawBitmap(myImage1, gx, gy, paint);
 		paint.setColor(Color.YELLOW);
-		canvas.drawBitmap(myImage3, yx, yy, paint);
+		canvas.drawBitmap(myImage2, yx, yy, paint);
 		if (!up1) {
 			y = y - 10;
-			if (y <= 0) {
+			if (y - 150 <= 0) {
 				up1 = true;
 			}
 		} else {
 			y = y + 10;
-			if (height <= y) {
+			if (height <= y +150) {
 				up1 = false;
 			}
 		}
 
 		if (!up2) {
 			gy = gy - 20;
-			if (y <= 0) {
+			if (gy - 130 <= 0) {
 				up2 = true;
 			}
 		} else {
 			gy = gy + 20;
-			if (height <= gy) {
+			if (height <= gy + 130) {
 				up2 = false;
 			}
 		}
 
 		if (!up3) {
 			yy = yy - 15;
-			if (yy <= 0) {
+			if (yy -110 <= 0) {
 				up3 = true;
 			}
 		} else {
 			yy = yy + 15;
-			if (height <= y) {
+			if (height <= yy + 110) {
 				up3 = false;
 			}
 		}
