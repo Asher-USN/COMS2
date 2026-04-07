@@ -16,6 +16,7 @@ import android.view.WindowManager;
 import android.view.WindowMetrics;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 
 public class MainActivity extends Activity implements View.OnTouchListener {
@@ -142,6 +143,16 @@ public class MainActivity extends Activity implements View.OnTouchListener {
 			b1.xspeed *= -1;
 			b2.xspeed *= -1;
 			b3.xspeed *= -1;
+			Random random = new Random();
+
+			@SuppressLint({"NewApi", "LocalSuppress"}) double randHeight = random.nextDouble(height);
+			@SuppressLint({"NewApi", "LocalSuppress"}) double randWidth = random.nextDouble(width);
+			Ball bNew = new Ball(randWidth,randHeight,0,0,width,height);
+			balls.add(bNew);
+
+		}
+		if(touched<(width/2)){
+			balls.clear();
 		}
 		return false;
 	}
