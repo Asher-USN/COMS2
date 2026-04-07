@@ -67,7 +67,7 @@ public class MainActivity extends Activity implements View.OnTouchListener {
     public boolean onTouch(View arg0, MotionEvent arg1) {
 
         float touched = arg1.getX();
-        if (touched > (width / 2)) {
+        if (touched >= (width / 2)) {
             b1.y = 50;
             b2.y = 50;
             b3.y = 50;
@@ -85,6 +85,6 @@ public class MainActivity extends Activity implements View.OnTouchListener {
         if (touched < (width / 2)) {
             balls.clear();
         }
-        return false;
+        return true;
     }
 }
